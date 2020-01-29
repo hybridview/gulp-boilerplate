@@ -7,23 +7,17 @@ import {
 } from './scripts'
 
 import {
-  compileStyles,
-  lintStyles,
-  watchStyles,
-} from './styles'
-
-import {
   compileMarkup,
   watchMarkup,
 } from './markup'
 
-const lint = gulp.parallel(lintStyles, lintScripts)
+const lint = gulp.parallel(lintScripts)
 lint.description = 'lint all source'
 
-const compile = gulp.parallel(compileMarkup, compileStyles, compileScripts)
+const compile = gulp.parallel(compileMarkup, compileScripts)
 compile.description = 'compile all source'
 
-const watch = gulp.parallel(watchMarkup, watchStyles, watchScripts)
+const watch = gulp.parallel(watchMarkup, watchScripts)
 watch.description = 'watch for changes to all source'
 
 export {

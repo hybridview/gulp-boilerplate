@@ -29,7 +29,6 @@ module.exports = {
     load: {
       rename: {
         'gulp-gh-pages': 'deploy',
-        'gulp-cssnano': 'minify',
         'gulp-autoprefixer': 'prefix',
       },
     },
@@ -37,9 +36,7 @@ module.exports = {
     rename: {
       suffix: '.min',
     },
-    stylint: {
-      reporter: 'stylint-stylish',
-    },
+    
   },
   paths: {
     base: env,
@@ -50,10 +47,6 @@ module.exports = {
       scripts: {
         root: 'src/script/index.js',
         all: 'src/script/**/*.js',
-      },
-      styles: {
-        root: 'src/style/style.styl',
-        all: 'src/style/**/*.styl',
       }
     },
     destinations: {

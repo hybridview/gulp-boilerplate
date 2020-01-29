@@ -6,7 +6,6 @@ import {
   lintScripts,
   watchScripts,
 } from './build-tasks/scripts'
-import { compileStyles, lintStyles, watchStyles } from './build-tasks/styles'
 import { compileMarkup, watchMarkup } from './build-tasks/markup'
 
 import { compile, lint, watch as watchEverything } from './build-tasks/main'
@@ -23,11 +22,8 @@ export {
   watchEverything as watch,
   compileScripts,
   compileMarkup,
-  compileStyles,
   lintScripts,
-  lintStyles,
   watchScripts,
-  watchStyles,
   watchMarkup,
 }
 const env = getEnv()
