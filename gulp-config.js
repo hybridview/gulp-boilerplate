@@ -29,6 +29,7 @@ module.exports = {
     load: {
       rename: {
         'gulp-gh-pages': 'deploy',
+        'gulp-cssnano': 'minify',
         'gulp-autoprefixer': 'prefix',
       },
     },
@@ -36,7 +37,9 @@ module.exports = {
     rename: {
       suffix: '.min',
     },
-    
+    stylint: {
+      reporter: 'stylint-stylish',
+    },
   },
   paths: {
     base: env,
@@ -46,7 +49,12 @@ module.exports = {
       overwatch: env + '**/*.{html,js,css}',
       scripts: {
         root: 'src/script/index.js',
+        tsroot: 'src/tsscript/test.ts',
         all: 'src/script/**/*.js',
+      },
+      styles: {
+        root: 'src/style/style.styl',
+        all: 'src/style/**/*.styl',
       }
     },
     destinations: {

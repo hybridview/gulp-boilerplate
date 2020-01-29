@@ -1,4 +1,4 @@
-import gulp from'gulp'
+import gulp from 'gulp'
 import gConfig from '../gulp-config'
 import { getEnv } from './utils'
 import pluginLoader from 'gulp-load-plugins'
@@ -10,19 +10,19 @@ const dest = gConfig.paths.destinations
 const plugins= pluginLoader(opts.load)
 
 /* TODO: populate linting */
-const lint = () => ()
+const lint = () => {}
 /* TODO: lint description */
 lint.description = ``
 /* TODO: lint flags */
 lint.flags = {}
 /* TODO: populate compilation task */
-const compile = () => ()
+const compile = () => {}
 /* TODO: compile description */
 compile.description = ``
 /* TODO: compile flags */
 compile.flags = {}
 /* TODO: populate watching task */
-const watch = () => ()
+const watch = () => {}
 /* TODO: watch description */
 watch.description = ``
 /* TODO: watch flags */

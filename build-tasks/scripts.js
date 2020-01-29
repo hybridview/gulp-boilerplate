@@ -4,7 +4,7 @@ import { getEnv } from './utils'
 import { rollup } from 'rollup'
 import babel from 'rollup-plugin-babel'
 import resolve from 'rollup-plugin-node-resolve'
-import uglify from 'rollup-plugin-uglify'
+import { uglify } from 'rollup-plugin-uglify'
 import pluginLoader from 'gulp-load-plugins'
 
 const opts = gConfig.pluginOpts
@@ -21,17 +21,18 @@ const lintScripts = () => {
 }
 lintScripts.description = `lint script source(${src.scripts.all}) using eslint`
 
-const compileScripts = async function() {
+const compileScripts = async function () {
 
   const plugins = [
     resolve(),
-    babel({ exclude: 'node_modules/**' }),
+    babel({ exclude: 'node_modules/**',
+      extensions: ['.js', '.jsx', '.ts', '.tsx'] }),
   ]
 
   if (env.mapped || env.deploy) plugins.push(uglify())
 
   const bundle = await rollup({
-    input: src.scripts.root,
+    input: src.scripts.tsroot,
     plugins,
   })
 

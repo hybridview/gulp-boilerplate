@@ -1,0 +1,16 @@
+{
+  "presets": [
+    
+    [
+    	
+    "@babel/typescript", {
+      "targets": [
+        "> 0.25% and last 2 versions and not dead",
+        "unreleased versions"
+      ]
+    }
+  ]],"plugins": [
+        "@babel/plugin-proposal-class-properties",
+        "@babel/proposal-object-rest-spread"
+    ]
+}

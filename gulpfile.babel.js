@@ -28,8 +28,8 @@ export {
 }
 const env = getEnv()
 // NOTE:: wrapper functions necessary to get metadata for tasks as intended
-const serve = (cb) => serveEverything(cb)
-const watch = (cb) => watchEverything(cb)
+const serve = cb => serveEverything(cb)
+const watch = cb => watchEverything(cb)
 const defaultTasks = env.deploy
   ? gulp.series(deploy)
   : gulp.parallel(
